@@ -65,6 +65,17 @@ public class MainFrame extends PApplet {
         for (PointFeature pf:bigEq ){
             markers.add(new SimplePointMarker(pf.getLocation(),pf.getProperties()));
         }
+        int yellow =color(255,255,0);
+        int gray =color(150,150,0);
+
+        for(Marker marker : markers){
+            if((Integer)marker.getProperty("year")>2000){
+                marker.setColor(yellow);
+            }else{
+                marker.setColor(gray);
+            }
+        }
+
         map.addMarkers(markers);
     }
 

@@ -10,50 +10,63 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../lib/core.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/libTUIO.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/log4j-1.2.15.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/json4processing.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/sqlite-jdbc-3.7.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/unfolding.0.9.7-uscd.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-linux-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-linux-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-linux-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-windows-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-linux-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-linux-armv6hf.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-windows-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-windows-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-linux-armv6hf.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-windows-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-macosx-universal.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-macosx-universal.jar!/" />
+          <root url="jar://L:/lib/core.jar!/" />
+          <root url="jar://L:/lib/libTUIO.jar!/" />
+          <root url="jar://L:/lib/jogl-all.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt.jar!/" />
+          <root url="jar://L:/lib/log4j-1.2.15.jar!/" />
+          <root url="jar://L:/lib/json4processing.jar!/" />
+          <root url="jar://L:/lib/sqlite-jdbc-3.7.2.jar!/" />
+          <root url="jar://L:/lib/unfolding.0.9.7-uscd.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-linux-i586.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-linux-amd64.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-linux-i586.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-windows-i586.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-linux-amd64.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-linux-armv6hf.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-windows-amd64.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-windows-i586.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-linux-armv6hf.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-windows-amd64.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-macosx-universal.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-macosx-universal.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../lib/core.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/libTUIO.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/log4j-1.2.15.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/json4processing.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/sqlite-jdbc-3.7.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/unfolding.0.9.7-uscd.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-linux-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-linux-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-linux-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-windows-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-linux-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-linux-armv6hf.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-windows-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-windows-i586.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-linux-armv6hf.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-windows-amd64.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/jogl-all-natives-macosx-universal.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../lib/gluegen-rt-natives-macosx-universal.jar!/" />
+          <root url="jar://L:/lib/core.jar!/" />
+          <root url="jar://L:/lib/libTUIO.jar!/" />
+          <root url="jar://L:/lib/jogl-all.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt.jar!/" />
+          <root url="jar://L:/lib/log4j-1.2.15.jar!/" />
+          <root url="jar://L:/lib/json4processing.jar!/" />
+          <root url="jar://L:/lib/sqlite-jdbc-3.7.2.jar!/" />
+          <root url="jar://L:/lib/unfolding.0.9.7-uscd.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-linux-i586.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-linux-amd64.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-linux-i586.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-windows-i586.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-linux-amd64.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-linux-armv6hf.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-windows-amd64.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-windows-i586.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-linux-armv6hf.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-windows-amd64.jar!/" />
+          <root url="jar://L:/lib/jogl-all-natives-macosx-universal.jar!/" />
+          <root url="jar://L:/lib/gluegen-rt-natives-macosx-universal.jar!/" />
         </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../lib" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../lib" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
