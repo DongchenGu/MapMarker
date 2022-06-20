@@ -100,7 +100,6 @@ public class EarthquakeCityMap extends PApplet {
 	{  
 		
 		//System.out.println(feature.getProperties());
-		
 		// Create a new SimplePointMarker at the location given by the PointFeature
 		SimplePointMarker marker = new SimplePointMarker(feature.getLocation());
 		
