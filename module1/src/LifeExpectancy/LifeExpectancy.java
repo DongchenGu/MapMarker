@@ -19,7 +19,6 @@ import java.util.Map;
 public class LifeExpectancy extends PApplet {
 
     UnfoldingMap map;
-
     Map<String, Float> lifeExpectancy =new HashMap<String, Float>();
     List<Feature> features = new ArrayList<>();
     List<Marker> markers = new ArrayList<Marker>();
@@ -43,14 +42,12 @@ public class LifeExpectancy extends PApplet {
         markers = MapUtils.createSimpleMarkers(features);
         map.addMarkers(markers);
         shadeCountries();
-
     }
 
     public void draw(){
         map.draw();
         shadeCountries();
     }
-
     private void loadLifeExpectancyFromCSV(String fileStr) throws IOException {
         List<String> rows = new ArrayList<String>();
         //File csv = new File(fileStr);
