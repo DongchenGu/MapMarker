@@ -1,5 +1,8 @@
 package EarthquakeCityMapUpdate1;
 
+import java.util.HashMap;
+import java.util.Set;
+
 import de.fhpotsdam.unfolding.data.PointFeature;
 import de.fhpotsdam.unfolding.marker.SimplePointMarker;
 import processing.core.PGraphics;
@@ -43,7 +46,7 @@ public abstract class EarthquakeMarker extends SimplePointMarker
 	{
 		super(feature.getLocation());
 		// Add a radius property and then set the properties
-		java.util.HashMap<String, Object> properties = feature.getProperties();
+		HashMap<String, Object> properties = feature.getProperties();
 		float magnitude = Float.parseFloat(properties.get("magnitude").toString());
 		properties.put("radius", 2*magnitude );
 		setProperties(properties);
@@ -62,8 +65,15 @@ public abstract class EarthquakeMarker extends SimplePointMarker
 		// call abstract method implemented in child class to draw marker shape
 		drawEarthquake(pg, x, y);
 		
-		// OPTIONAL TODO: draw X over marker if within past day		
-		
+		// OPTIONAL TODO: draw X over marker if within past day
+		HashMap<String , Object> hashMap = new HashMap<>(); 
+		hashMap =	getProperties();
+		Set<String> set = hashMap.keySet();
+		if(hashMap.get("age") == "Past Month") {
+				pg.line(x-20, y-20, x+20, y+20);
+				pg.line(x-20, y+20, x+20, y-20);
+		}
+	
 		// reset to previous styling
 		pg.popStyle();
 		

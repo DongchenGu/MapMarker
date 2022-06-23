@@ -42,11 +42,12 @@ public class EarthquakeCityMap extends PApplet {
 	
 
 	//feed with magnitude 2.5+ Earthquakes
+	
 	private String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
 	
 	// The files containing city names and info and country names and info
-	private String cityFile = "city-data.json";
-	private String countryFile = "countries.geo.json";
+	private String cityFile = "L:\\MapMarker\\module1\\src\\data\\city-data.json";
+	private String countryFile = "L:\\MapMarker\\module1\\src\\data\\countries.geo.json";
 	
 	// The map
 	private UnfoldingMap map;
@@ -61,13 +62,13 @@ public class EarthquakeCityMap extends PApplet {
 	
 	public void setup() {		
 		// (1) Initializing canvas and map tiles
-		size(900, 700, OPENGL);
+		size(1600,1200, OPENGL);
 		if (offline) {
-		    map = new UnfoldingMap(this, 200, 50, 650, 600, new MBTilesMapProvider(mbTilesString));
+		    map = new UnfoldingMap(this, 200, 50, 1450, 1000, new MBTilesMapProvider(mbTilesString));
 		    earthquakesURL = "2.5_week.atom";  // The same feed, but saved August 7, 2015
 		}
 		else {
-			map = new UnfoldingMap(this, 200, 50, 650, 600, new Microsoft.AerialProvider());
+			map = new UnfoldingMap(this, 200, 50, 1450, 1000, new Microsoft.RoadProvider());
 			// IF YOU WANT TO TEST WITH A LOCAL FILE, uncomment the next line
 		    //earthquakesURL = "2.5_week.atom";
 		}
@@ -79,7 +80,7 @@ public class EarthquakeCityMap extends PApplet {
 		//earthquakesURL = "test2.atom";
 		
 		// WHEN TAKING THIS QUIZ: Uncomment the next line
-		//earthquakesURL = "quiz1.atom";
+		//earthquakesURL = "/UCSDUnfoldingMaps/data/quiz1.atom";
 		
 		
 		// (2) Reading in earthquake data and geometric properties
@@ -185,15 +186,29 @@ public class EarthquakeCityMap extends PApplet {
 	{
 		Map<String, Integer> countMap = new HashMap<>();
 		String countrString = null;
-		Integer counterOcean = 0;
+		Integer counterOcean = 0; 
 		Integer counterInteger =0;
 		for (Marker mk :quakeMarkers ) {
-			if((countrString = mk.getStringProperty("country"))!= null) 
-				countMap.put(countrString, counterInteger++);
-			else {
-				countMap.put("Ocean", counterOcean++);
+			if((countrString = mk.getStringProperty("country"))!= null) {
+				if(countMap.containsKey(countrString)){
+					counterInteger = Integer.parseInt(countMap.get(countrString).toString());
+					countMap.replace(countrString, ++counterInteger);
+				}else {
+					countMap.put(countrString, 1);
 				}
+			} else {
+				if(countMap.containsKey("Ocean")) {
+					counterInteger = Integer.parseInt(countMap.get("Ocean").toString());
+					countMap.replace("Ocean", ++counterInteger);
+				}else {
+					countMap.put("Ocean", 1);
+				}
+			}
 		}
+		
+		
+		
+		
 		Set<String> countries = countMap.keySet();
 		
 		for(String string : countries) {
