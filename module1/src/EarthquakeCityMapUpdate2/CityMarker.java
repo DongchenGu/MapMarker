@@ -3,8 +3,6 @@ package EarthquakeCityMapUpdate2;
 import de.fhpotsdam.unfolding.data.Feature;
 import de.fhpotsdam.unfolding.data.PointFeature;
 import de.fhpotsdam.unfolding.geo.Location;
-import de.fhpotsdam.unfolding.marker.SimplePointMarker;
-import processing.core.PConstants;
 import processing.core.PGraphics;
 
 /** Implements a visual marker for cities on an earthquake map
@@ -32,32 +30,18 @@ public class CityMarker extends CommonMarker {
 	}
 
 	
-	/**
-	 * Implementation of method to draw marker on the map.
-	 */
-	public void draw(PGraphics pg, float x, float y) {
-		
-		super.draw(pg, x, y);
-		// Save previous drawing style
-		pg.pushStyle();
-		
-		// IMPLEMENT: drawing triangle for each city
-		pg.fill(150, 30, 30);
-		pg.triangle(x, y-TRI_SIZE, x-TRI_SIZE, y+TRI_SIZE, x+TRI_SIZE, y+TRI_SIZE);
-		
-		// Restore previous drawing style
-		pg.popStyle();
-	}
+	
 	
 	/** Show the title of the city if this marker is selected */
 	public void showTitle(PGraphics pg, float x, float y)
 	{
 		//System.out.println("CityMarker已经执行");
 		String showString = "City: "+this.getCity()+"Population: "+ this.getPopulation()+ "Country: "+this.getCountry();
-		pg.beginDraw();
+		pg.pushStyle();
 		pg.textSize(14);
+		pg.fill(0,0,0);
 		pg.text(showString, x, y);
-		pg.endDraw();
+		pg.popStyle();
 		// TODO: Implement this method
 	}
 	
@@ -84,6 +68,14 @@ public class CityMarker extends CommonMarker {
 	@Override
 	public void drawMarker(PGraphics pg, float x, float y) {
 		// TODO Auto-generated method stub
+		// Save previous drawing style
+		pg.pushStyle();
 		
+		// IMPLEMENT: drawing triangle for each city
+		pg.fill(150, 30, 30);
+		pg.triangle(x, y-TRI_SIZE, x-TRI_SIZE, y+TRI_SIZE, x+TRI_SIZE, y+TRI_SIZE);
+		
+		// Restore previous drawing style
+		pg.popStyle();
 	}
 }

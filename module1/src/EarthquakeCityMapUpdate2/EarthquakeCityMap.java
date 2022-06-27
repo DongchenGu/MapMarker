@@ -11,7 +11,6 @@ import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.marker.AbstractShapeMarker;
 import de.fhpotsdam.unfolding.marker.Marker;
 import de.fhpotsdam.unfolding.marker.MultiMarker;
-import de.fhpotsdam.unfolding.providers.Google;
 import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
 import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.utils.MapUtils;
@@ -149,13 +148,17 @@ public class EarthquakeCityMap extends PApplet {
 	// 
 	private void selectMarkerIfHover(List<Marker> markers)
 	{
+		if(lastSelected != null) {
+			return;
+		}
 		
 		// TODO: Implement this method
 		for(Marker mk: markers) {
 			//System.out.println(mk.getLocation());
-			if(mk.isInside(map, mouseX, mouseY)) {
+			CommonMarker marker = (CommonMarker)mk;
+			if(marker.isInside(map, mouseX, mouseY)) {
 				//System.out.println("判断成功");
-				lastSelected = (CommonMarker)mk;
+				lastSelected = marker;
 				lastSelected.setSelected(true);
 				//System.out.println("判断完毕");
 			}
@@ -169,15 +172,31 @@ public class EarthquakeCityMap extends PApplet {
 	 */
 	@Override
 	public void mouseClicked()
-	{
+	{	
+		System.out.println("mouseClicked");
 		if(lastClicked!= null) {
-			lastClicked = (CommonMarker)
-			         
-		}
+			lastClicked.setClicked(false);
+			lastClicked = null;
+			unhideMarkers();
+		}else {
+			List<Marker>markers = new ArrayList<>();
+			markers.addAll(quakeMarkers);
+			markers.addAll(cityMarkers);
+			for(Marker marker : markers) {			
+				//CommonMarker earthquakeMarker = (CommonMarker)marker;
+				if(!marker.isHidden() && marker.isInside(map, mouseX, mouseY)) {
+					lastClicked = (CommonMarker)marker;					
+					marker.setHidden(false);			
+				}else {
+					marker.setHidden(true);	
+				}
+			}			
+			}
+	}
 		// TODO: Implement this method
 		// Hint: You probably want a helper method or two to keep this code
 		// from getting too long/disorganized
-	}
+	
 	
 	
 	// loop over and unhide all markers
