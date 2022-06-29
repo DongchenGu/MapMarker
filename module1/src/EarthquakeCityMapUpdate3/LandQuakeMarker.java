@@ -1,4 +1,4 @@
-package EarthquakeCityMapUpdate2;
+package EarthquakeCityMapUpdate3;
 
 import de.fhpotsdam.unfolding.data.PointFeature;
 import processing.core.PGraphics;
@@ -17,9 +17,14 @@ public class LandQuakeMarker extends EarthquakeMarker {
 	}
 
 
-	/** Draw the earthquake as an ellipse */
 	@Override
 	public void drawEarthquake(PGraphics pg, float x, float y) {
+		// IMPLEMENT: drawing circle for LandQuake
+		// DO NOT set the fill color.  That will be set in the EarthquakeMarker
+		// class to indicate the depth of the earthquake.
+		// Simply draw a centered square.
+		// HINT: Notice the radius variable in the EarthquakeMarker class
+		// and how it is set in the EarthquakeMarker constructor
 		pg.ellipse(x, y, 2*radius, 2*radius);
 		
 	}

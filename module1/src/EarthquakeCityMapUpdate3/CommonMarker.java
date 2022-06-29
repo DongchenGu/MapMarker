@@ -1,9 +1,9 @@
-package EarthquakeCityMapUpdate2;
+package EarthquakeCityMapUpdate3;
+
 
 import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.marker.SimplePointMarker;
 import processing.core.PGraphics;
-
 
 public abstract class CommonMarker extends SimplePointMarker {
 
@@ -29,6 +29,7 @@ public abstract class CommonMarker extends SimplePointMarker {
 	}
 	
 	// Common piece of drawing method for markers; 
+	// YOU WILL IMPLEMENT. 
 	// Note that you should implement this by making calls 
 	// drawMarker and showTitle, which are abstract methods 
 	// implemented in subclasses
@@ -37,7 +38,7 @@ public abstract class CommonMarker extends SimplePointMarker {
 		if (!hidden) {
 			drawMarker(pg, x, y);
 			if (selected) {
-				showTitle(pg, x, y);  // You will implement this in the subclasses
+				showTitle(pg, x, y);
 			}
 		}
 	}
