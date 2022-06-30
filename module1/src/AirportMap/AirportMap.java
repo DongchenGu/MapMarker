@@ -39,12 +39,16 @@ public class AirportMap  extends PApplet {
        }
        map.addMarkers(airportMarkers);
        map.zoomAndPanTo(5, new Location(39.95f, -75.12f));
+
     }
 
 
     @Override
     public void draw() {
         map.draw();
+        fill(color(122,35,125));
+        textSize(35);
+        text("AirportMap",0,27);
     }
 
     @Override

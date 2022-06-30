@@ -54,7 +54,7 @@ public class AirportMarker extends SimplePointMarker {
 
         pg.stroke(110);
         pg.fill(255,255,255);
-        pg.rect(x, y + 15, pg.textWidth(title) +6, 18, 5);
+        pg.rect(x, y + 15, pg.textWidth(title) +6, 28, 5);
 
         pg.textAlign(PConstants.LEFT, PConstants.TOP);
         pg.fill(0);
